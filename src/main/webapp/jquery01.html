@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+ /* h1,p {color: orange;} */
+</style>
+<title>Insert title here</title>
+<script src="js/jquery-4.0.0.min.js"></script>
+<script>
+// jquery 호출 $('선택자')
+// jquery 에서 화면이 다 그려진 후   = window.onload
+ $(document).ready(function () {
+//	$('*').css('color','orange')
+	$('h1,p').css('color','orange')
+});
+</script>
+</head>
+<body>
+	<h1>Hello</h1>
+	<p>Lorem Ipsum</p>
+	<h1>Title</h1>
+	<p>Lorem Ipsum</p>
+	<p>Lorem Ipsum</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jquery CDN -->
+<script src="http://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script>
+	$(function () {
+		$('#name').val('Hello Jquery!!!!')
+		
+		let name2El = document.getElementById('name2');
+		name2El.value = 'Hello 제이쿼리!!!!';
+		
+		let name3El = $('#name3')			 // jQuery 는 배열로 생각함
+		name3El[0].value = 'Hello J쿼리!!!'; // 그래서 [0] 붙여야함
+	})
+</script>
+</head>
+<body>
+ <form id="frm">
+    <input type="text" id="name" />
+    <input type="text" id="name2" />
+    <input type="text" id="name3" />
+    <input type="password"  />
+    <input type="radio"  />
+    <input type="checkbox"  />
+    <input type="file"  />
+ </form>
+</body>
+</html>

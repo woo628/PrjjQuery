@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+ /* h1,p {color: orange;} */
+</style>
+<title>Insert title here</title>
+<!-- jquery CDN -->
+<script src="http://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script>
+// window.onload 는 한번만 작동
+// ${} 는 여러번 가능
+	/* $(function () {
+		alert("하하")
+	});
+	
+	$(function () {
+		alert("하하2")
+	});
+	 */
+	$(function () {
+//		$('div').html('<h1>Hello</h1>') // .innerHTML - tag 작동
+//		$('div').text('<h1>Hello</h1>') // .innerText - tag 출력
+//		$('div').eq(0).html('<h1>Hello</h1>') // 첫번째 div만 적용
+//		$('div:first-of-type').html('<h1>Hello</h1>') // 첫번째 div만 적용
+//		$('div:nth-of-type(1)').html('<h1>Hello</h1>') // 첫번째 div만 적용
+		$('.item').css('color', 'orange')
+		$('.item.select').css('color', 'cyan')
+		$('button').on('click', function() { // button 클릭시  on(), off(), once()
+			$('#output').html('<h2>안녕하세요</h2>')
+			$('#output').append('<h3>반갑습니다</h3>')
+			alert('Ok')
+			$('button').off('click') // 이벤트제거
+		})
+	});
+</script>
+</head>
+<body>
+	<h1>Jquery test</h1>
+	<div class="item">Div 1</div>
+	<div class="item select">Div 2</div>
+	<div class="item">Div 3</div>
+	<div class="item">Div 4</div>
+	<button>Ok</button>
+	<div id="output"></div>
+</body>
+</html>
