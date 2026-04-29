@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+	$(function () {
+	/* 	$('h1').filter(':even').css({
+			'background-color':'black',
+			'color':'white'
+		}) */
+		$('h1').filter(function (index) {
+			return index % 3 == 0         // 3으로나눈 나머지 even이랑 비슷하지만 여러개 가능
+		}).css({
+			'background-color':'black',
+			'color':'white'
+//			 background-color:'black',
+//			 color:'white'
+	    })
+	    $('h1').eq(0).css('color', 'cyan') // 첫번째 줄
+	    $('h1').eq(-1).css('color', 'cyan') // 마지막 줄
+	})
+</script>
+</head>
+<body>
+   <h1>Header-0</h1>
+   <h1>Header-1</h1>
+   <h1>Header-2</h1>
+   <h1>Header-3</h1>
+   <h1>Header-4</h1>
+   <h1>Header-5</h1>
+   <h1>Header-6</h1>
+   <h1>Header-7</h1> 
+</body>
+</html>

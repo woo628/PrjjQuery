@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<style>
+  
+</style>
+<script>
+	$(function () {
+//		$('tr:odd').css('backgroundColor','black').css('color','white')
+		/* $('tr:odd').css({'backgroundColor':'black','color':'white'})
+		$('tr:even').css({'backgroundColor':'silver','color':'white'})
+		$('tr:first').css({'backgroundColor':'blue','color':'white'})	 */	
+		
+	/* 	$('button').on('click', function(e) { // e = event
+			const btnEl = e.target  // 클릭한 대상			
+			if ($(btnEl).html() == 'Click Me Show') {
+				$('table').show()
+			}
+			if ($(btnEl).html() == 'Click Me Hide') {
+				$('table').hide()
+			}
+		}) */
+			
+		$('button').on('click', function() { // e = event
+			// this = e.target 		this java 객체 이니 jquery 는 ${} 필요
+			if ($(this).html() == 'Click Me Show') {
+				$('table').show()
+			}
+			if ($(this).html() == 'Click Me Hide') {
+				$('table').hide()
+			}
+		})
+		
+		/* $('table tr').mouseover(function() {
+			$(this).css({ 
+				'backgroundColor':'black','color':'white'
+			})
+		})
+		.mouseout(function() {
+			$(this).css({ 
+				'backgroundColor':'white','color':'black'
+			})
+		}) */
+		
+		// table>tr = <tboby> 그래서 tr이 자식이 아니다
+		$('tr').on({
+			mouseover : function () {
+				$(this).css({ 
+					'backgroundColor':'black','color':'white'
+				})
+			},
+			mouseout : function () {
+				$(this).css({ 
+					'backgroundColor':'white','color':'black'
+				})
+			} 
+		})
+ })
+</script>
+</head>
+<body>
+  <button>Click Me Show</button>
+   <button>Click Me Hide</button>
+   <table>
+     <tr>
+	    <td>번호</td>
+	    <td>종목</td>
+	    <td>수량</td>
+	 </tr>
+     <tr>
+	    <td>1</td>
+	    <td>사과</td>
+	    <td>100</td>
+	 </tr>
+	 <tr>
+	    <td>2</td>
+	    <td>바나나</td>
+	    <td>200</td>
+	 </tr>
+	 <tr>
+	    <td>3</td>
+	    <td>수박</td>
+	    <td>150</td>
+	 </tr>
+	  <tr>
+	    <td>4</td>
+	    <td>딸기</td>
+	    <td>300</td>
+	 </tr>
+   </table>  
+</body>
+</html>

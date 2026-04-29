@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<style>
+  img {width: 200px; height: 200px; position: relative;}
+</style>
+<script>
+	$(function () {
+		$('img').animate({left:'+=100'},1000)
+		$('img').animate({width:'+=100'},1000)		
+		$('img').animate({height:'+=100'},1000)	
+		
+		// 7초후 사라짐
+		setTimeout(function() {
+			$('img').clearQueue // 에니메이션 큐 삭제
+			$('img').hide()
+		}, 5*1000)
+	})
+</script>
+</head>
+<body>
+  <img src="img/Koala.jpg">
+</body>
+</html>

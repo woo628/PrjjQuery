@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src=js/jquery.innerfade.js></script>
+<style>
+  * {padding: 0; margin: 0; box-sizing: border-box;}
+  ul {list-style: none;}
+  img {width: 500px; height: 300px;}
+</style>
+<script>
+	$(function () {
+		$('#inner-fade').innerfade({
+			animationtype : 'fade',
+			speed : 550,
+			timeout : 1000,
+			type: 'random',
+			containerheight :'350px'
+	  	})
+	})
+</script>
+</head>
+<body>
+  <ul id="inner-fade">
+    <li><img src="img/Chrysanthemum.jpg" /></li>
+    <li><img src="img/Desert.jpg" /></li>
+    <li><img src="img/Hydrangeas.jpg" /></li>
+    <li><img src="img/Jellyfish.jpg" /></li>
+    <li><img src="img/Koala.jpg" /></li>
+    <li><img src="img/Penguins.jpg" /></li>
+    <li><img src="img/Lighthouse.jpg" /></li>
+    <li><img src="img/Tulips.jpg" /></li>
+  </ul>
+</body>
+</html>

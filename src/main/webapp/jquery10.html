@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+<style>
+  div {width: 100px; height: 100px; background-color: orange; position: relative;}
+</style>
+<script>
+	$(function () {
+		let eases = ['linear','swing','easeInQuad','easeOutQuad','easeInOutQuad','easeInCubic','easeOutCubic','easeInOutCubic','easeInQuart','easeOutQuart'
+					,'easeInOutQuart','easeInQuint','easeOutQuint','easeInOutQuint','easeInExpo','easeOutExpo','easeInOutExpo','easeInSine','easeOutSine'
+					,'easeInOutSine','easeInCirc','easeOutCirc','easeInOutCirc','easeInElastic','easeOutElastic','easeInOutElastic','easeInBack'
+					,'easeOutBack','easeInOutBack','easeInBounce','easeOutBounce','easeInOutBounce']
+		
+		let tag = '';
+		$.each(eases, function(index, opt) {
+			tag += `<option>${opt}</option>`
+		})
+			$('select').html(tag)
+		
+		$('button').click(function() {
+			let easing = $('option:selected').html()
+			$('div')
+			.animate({
+			  left: '400'
+			},2000,easing)
+			.animate({
+			  left: '0'
+			},1000,easing)
+		})
+	})
+</script>
+</head>
+<body>
+   <select>
+   </select>
+   <button>MOVE</button>
+   <div></div> 
+</body>
+</html>
